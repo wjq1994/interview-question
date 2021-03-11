@@ -9,3 +9,4 @@ frontend interview question
 ## js
 
 1、[防抖和节流](./md/防抖和节流.md)
+2、[深拷贝](./md/深拷贝.md)
