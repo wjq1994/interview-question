@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        box
+        <button id="btn">点击</button>
+    </div>
+
+    <script>
+        function throttle(fn, delay) {
+            let flag = false
+            return function () {
+                if (flag) {
+                    return  // 如果flag = false，那就直接不执行下边的代码
+                }
+                flag = true // 持续触发的话，flag一直是true，就会停在上边的判断那里
+                setTimeout(() => {
+                    fn()// 定时器到时间之后，函数就会被执行
+                    flag = false
+                }, delay)
+            }
+        }
+        // var box = document.querySelector('.box')
+        // box.onmousemove = throttle(function (e) {
+        //     console.log('onmousemove事件被触发了' + Date.now());
+        // }, 3000)
+
+        var btn = document.querySelector('#btn')
+
+        btn.onclick = throttle(function (e) {
+            console.log('onclick事件被触发了' + Date.now());
+        }, 3000)
+
+    </script>
+
+</body>
+
+</html>
