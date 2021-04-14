@@ -9,6 +9,15 @@ frontend interview question
 
 ## js
 
+### Object
+
+mock object methods
+
+1. [freeze](./md/Object/freeze.md)
+
+
+### other
+
 1. [防抖和节流](./md/防抖和节流.md)
 2. [深拷贝](./md/深拷贝.md)
 3. [事件环](./md/js事件环.md)
