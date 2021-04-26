@@ -1,0 +1,58 @@
+<!-- 这个不好使 因为右面高度也会随左面高度影响 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: "";    /*不用有内容也可以*/
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+        .content{
+            background: pink;
+         
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* align-items:stretch; */
+        }
+        .left-box{
+            width: 200px;
+            background: olive;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            overflow: scroll;      
+        }
+        .right-box{
+            height: auto;
+            width: 300px;
+            background: red;
+            word-break: break-all;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="content clearfix">
+        <div class="left-box">
+            <div style="flex: 1;">我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧我是左侧</div>
+        </div>
+        <div class="right-box">你好范德萨发生的是的但是发你好范德萨发生的是的但是发射点发射点发射点发射点发大水发射点发射点发射点范德萨范德萨射点发射点发射点发射点发大水发射点发射点发射点范德萨范德萨</div>
+    </div>
+</body>
+</html>

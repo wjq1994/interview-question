@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            width: 100px;
+            height: 50px;
+        }
+
+        #big {
+            width: 500px;
+            height: auto;
+            background-color: red;
+            position: relative;
+        }
+
+        .left {
+            width: 200px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: inline-block;
+            background-color: yellow;
+            overflow: scroll;
+        }
+
+        .right {
+            margin-left: 200px;
+            width: 200px;
+            height: auto;
+            display: inline-block;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="big">
+    <div class="left">
+        <div>aaaaaa</div>
+        <div>aaaaaa</div>
+        <div>aaaaaa</div>
+        <div>aaaaaa</div>
+        <div>aaaaaa</div>
+    </div>
+    <div class="right">
+        <ul>
+            <li>haha</li>
+        </ul>
+    </div>
+</div>
+<button id="btn">点击增加</button>
+<script>
+    var right = document.getElementsByClassName("right")[0];
+    document.getElementById("btn").onclick = function () {
+        var x = document.createElement("li");
+        x.innerText = "hello";
+        document.getElementsByClassName("right")[0].getElementsByTagName("ul")[0].appendChild(x);
+    }
+</script>
+</body>
+</html>
